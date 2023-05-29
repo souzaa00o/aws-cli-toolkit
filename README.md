@@ -5,6 +5,8 @@
 #### create-event-source-mapping.sh
 ##### Atacha funções lambda em filas SQS e abre o monitoramento da fila SQS a ser reprocessada
 
+###### sintaxy
+
 ```bash
 ./create-event-source-mapping.sh <Nome da fila SQS> <Nome da função Lambda>
 ```
