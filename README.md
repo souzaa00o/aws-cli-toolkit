@@ -3,6 +3,7 @@
 ##### Toolkit Shell Script para aws-cli, gerenciando Lambda, SQS e IAM.
 ### SQS/
 
+###### Os Scripts SQS servem para monitorar as mensagens disponiveis e em in-flight em uma fila SQS, atachar uma função Lambda para reprocessar as mensagens em DLQs e tirar a Lambda da Fila após reprocessamento.
 #### create-event-source-mapping.sh
 ##### Atacha funções lambda em filas SQS e abre o monitoramento da fila SQS a ser reprocessada.
 
