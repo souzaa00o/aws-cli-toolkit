@@ -4,14 +4,7 @@
 ### SQS/
 
 ##### Os Scripts SQS servem para monitorar as mensagens disponiveis e em in-flight em uma fila SQS, atachar uma função Lambda para reprocessar as mensagens em DLQs e tirar a Lambda da Fila após reprocessamento.
-#### create-event-source-mapping.sh
-##### Atacha funções lambda em filas SQS e abre o monitoramento da fila SQS a ser reprocessada.
 
-###### sintaxy
-
-```bash
-./create-event-source-mapping.sh <Nome da fila SQS> <Nome da função Lambda>
-```
 #### get-queue-attributes.sh
 ##### Monitoramento de fila SQS passada como parametro em linha de comando.
 
@@ -20,6 +13,25 @@
 ```bash
 ./get-queue-attributes.sh <Nome da fila SQS>
 ```
+
+#### create-event-source-mapping.sh
+##### Atacha uma função lambda em uma fila SQS e abre o monitoramento da fila SQS a ser reprocessada.
+
+###### sintaxy
+
+```bash
+./create-event-source-mapping.sh <Nome da fila SQS> <Nome da função Lambda>
+```
+
+#### delete-event-source-mapping.sh
+##### Deletar uma função lambda da fila SQS.
+###### sintaxy
+
+```bash
+./delete-event-source-mapping.sh <Nome da Lambda>
+```
+
+
 
 ### IAM/
 
