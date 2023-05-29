@@ -9,17 +9,21 @@ aws iam create-user --user-name $USER_NAME --profile brabo
 
 USER_PASS=$(pwgen -y -1 15)
 
+sleep 1
+
 aws iam create-login-profile --user-name $USER_NAME --password $USER_PASS --password-reset-required --profile brabo
 echo Criando senha de aceso a console...
 
 echo Grupos:
 aws iam list-groups --query 'Groups[].GroupName' --output text --profile brabo
 
+sleep 1
+
 echo Digite o grupo para o usuario $USER_NAME:
 read GROUP_NAME
 
 aws iam add-user-to-group --user-name $USER_NAME --group-name $GROUP_NAME --profile brabo
 
-echo ¨URL,User,Password¨ > $USER_NAME.csv
+echo ¨URL,User,Password¨ > aws_credentials_$USER_NAME.csv
 echo ¨$URL,$USER_NAME,$USER_PASS¨ >> aws_credentials_$USER_NAME.csv
-echo Output $USER_NAME.csv created
+echo Output aws_credentials_$USER_NAME.csv created
