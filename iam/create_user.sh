@@ -1,9 +1,6 @@
 #!/bin/bash
 
-## passar script para executar como funções via parametros
-## apenas contruindo o raciocinio comando por comando por enquanto
-
-URL_METAFORICA=abc.com
+URL=https://signin.aws.amazon.com/
 
 echo Digite o username:
 read USER_NAME
@@ -24,5 +21,5 @@ read GROUP_NAME
 aws iam add-user-to-group --user-name $USER_NAME --group-name $GROUP_NAME --profile brabo
 
 echo ¨URL,User,Password¨ > $USER_NAME.csv
-echo ¨$URL_METAFORICA,$USER_NAME,$USER_PASS¨ >> $USER_NAME.csv
+echo ¨$URL,$USER_NAME,$USER_PASS¨ >> aws_credentials_$USER_NAME.csv
 echo Output $USER_NAME.csv created
