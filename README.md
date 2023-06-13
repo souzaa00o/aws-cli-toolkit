@@ -39,11 +39,15 @@
 
 ##### Script para criação de usuarios IAM e csv de creadenciais, adicionando o usuario em grupo IAM com senha aleatoria de primeiro acesso (o usuario sera obrigado a criar uma senha no primeiro login).
 
-⚠️ **Aviso Importante:** É necessario instalar o pacote **pwgen**, gerador de senhas para criar a senha aleatoria forte com 14 caracteres e simbolos na linha 10.
+⚠️ **Aviso Importante:** É necessario instalar os pacotes **pwgen** (gerador de senhas aleatorias) e **jq** (ferramenta de processamento JSON).
 
 ```bash
 sudo apt install pwgen
 ```
+```bash
+sudo apt install jq
+```
+
 ###### sintaxy
 
 ```bash
